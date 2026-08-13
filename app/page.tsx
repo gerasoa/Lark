@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <Link className="brand" href="/"><span className="brand-mark">E</span>Echo English</Link>
+        <Link className="brand" href="/"><span className="brand-mark">L</span>Lark</Link>
         <nav aria-label="Navegação principal"><a href="#lessons">Aulas</a><a href="#method">Como funciona</a></nav>
         <a className="button button-dark" href="#lessons">Começar agora</a>
       </header>
@@ -40,7 +40,7 @@ export default function Home() {
 
       <section className="method shell" id="method"><div><span className="kicker">Método simples</span><h2>Ouça. Entenda.<br />Use de verdade.</h2></div><div className="steps"><article><span>01</span><h3>Assista à cena</h3><p>Escute sem legendas e perceba ritmo, tom e contexto.</p></article><article><span>02</span><h3>Aprenda palavras</h3><p>Revise três expressões úteis da situação.</p></article><article><span>03</span><h3>Teste seu ouvido</h3><p>Responda perguntas e confira sua compreensão.</p></article></div></section>
       <section className="cta shell"><div><span className="eyebrow">Pronto para começar?</span><h2>Seu inglês ganha vida<br />quando você escuta.</h2></div><a className="button button-light" href="#lessons">Ver as aulas ↗</a></section>
-      <footer className="footer shell"><Link className="brand" href="/"><span className="brand-mark">E</span>Echo English</Link><p>Um mock-up de aprendizagem por escuta.</p><span>© 2026 Echo English</span></footer>
+      <footer className="footer shell"><Link className="brand" href="/"><span className="brand-mark">L</span>Lark</Link><p>Inglês em cenas, sons e contexto.</p><span>© 2026 Lark</span></footer>
     </main>
   );
 }

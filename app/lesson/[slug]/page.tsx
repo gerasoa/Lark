@@ -10,7 +10,7 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
 
   return <main className="lesson-page">
     <header className="site-header lesson-header">
-      <Link className="brand" href="/"><span className="brand-mark">E</span>Echo English</Link>
+      <Link className="brand" href="/"><span className="brand-mark">L</span>Lark</Link>
       <Link className="back-link" href="/#lessons">← Todas as aulas</Link>
     </header>
 
@@ -38,6 +38,6 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
     </section>
 
     <section className="next-lesson shell"><span>Continue aprendendo</span><Link href="/#lessons">Escolher outra aula <b>→</b></Link></section>
-    <footer className="footer shell"><Link className="brand" href="/"><span className="brand-mark">E</span>Echo English</Link><p>Um mock-up de aprendizagem por escuta.</p><span>© 2026 Echo English</span></footer>
+    <footer className="footer shell"><Link className="brand" href="/"><span className="brand-mark">L</span>Lark</Link><p>Inglês em cenas, sons e contexto.</p><span>© 2026 Lark</span></footer>
   </main>;
 }
