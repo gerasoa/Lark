@@ -56,6 +56,7 @@ button,input { font:inherit; }
 .method { padding-block:120px; display:grid; grid-template-columns:.8fr 1.2fr; gap:80px; }.steps { display:grid; grid-template-columns:repeat(3,1fr); }.steps article { padding:10px 25px 10px 0; border-right:1px solid var(--line); }.steps article+article { padding-left:25px; }.steps article:last-child { border:0; }.steps span { font:700 12px var(--font-geist-mono); color:var(--coral); }.steps h3 { color:var(--navy); font-size:18px; margin:50px 0 10px; }.steps p { color:var(--muted); font-size:14px; line-height:1.6; }
 .cta { min-height:330px; border-radius:28px; padding:55px 65px; background:var(--navy); display:flex; align-items:center; justify-content:space-between; color:white; position:relative; overflow:hidden; }.cta:after { content:""; position:absolute; width:300px;height:300px;border:1px solid rgba(255,255,255,.15);border-radius:50%;right:16%;top:-40%; }.cta h2 { color:white; }.cta .button { position:relative; z-index:2; }
 .footer { min-height:150px; display:grid; grid-template-columns:1fr 1fr 1fr; align-items:center; color:var(--muted); font-size:12px; }.footer p { text-align:center; }.footer>span { text-align:right; }
+.student-area-page { min-height:calc(100vh - 82px); background:var(--ivory); }
 
 .lesson-page { background:var(--ivory); }.lesson-header { background:var(--paper); }.back-link { font-size:13px;font-weight:750; }
 .lesson-hero { padding-block:42px 54px; }.breadcrumbs { display:flex; gap:10px; color:var(--muted); font-size:12px; }.breadcrumbs strong { color:var(--navy); }
@@ -133,7 +134,8 @@ button,input { font:inherit; }
 }
 
 @media (max-width:820px) {
-  .site-header nav { display:none; }
+  .site-header nav { gap:0; }
+  .site-header nav a:not(.student-area-nav-link) { display:none; }
   .section-heading { grid-template-columns:1fr; gap:24px; align-items:start; }
   .section-heading>p { max-width:620px; }
   .lesson-grid { grid-template-columns:1fr; }
@@ -150,6 +152,7 @@ button,input { font:inherit; }
   .shell { width:calc(100% - 32px); }
   .site-header { min-height:70px; padding-inline:16px; }
   .site-header>.button { display:none; }
+  .student-area-page { min-height:calc(100vh - 70px); }
   .hero { gap:36px; padding-block:48px 56px; }
   .hero h1 { font-size:clamp(44px,12vw,58px); line-height:.98; }
   .hero-copy>p { font-size:16px; line-height:1.6; }

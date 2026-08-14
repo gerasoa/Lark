@@ -7,7 +7,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <Link className="brand" href="/"><span className="brand-mark">L</span>Lark</Link>
-        <nav aria-label="Main navigation"><a href="#lessons">Lessons</a><a href="#method">How it works</a></nav>
+        <nav aria-label="Main navigation"><a href="#lessons">Lessons</a><a href="#method">How it works</a><Link className="student-area-nav-link" href="/student-area">Student area</Link></nav>
         <a className="button button-dark" href="#lessons">Get started</a>
       </header>
 
