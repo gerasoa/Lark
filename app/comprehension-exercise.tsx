@@ -5,6 +5,7 @@ import { FormEvent, useState } from "react";
 type ComprehensionQuestion = {
   prompt: string;
   options: string[];
+  answer: string;
 };
 
 type ComprehensionExerciseProps = {
@@ -25,7 +26,7 @@ export default function ComprehensionExercise({ questions }: ComprehensionExerci
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const answers = correctAnswers ?? questions.map((question) => Math.floor(Math.random() * question.options.length));
+    const answers = correctAnswers ?? questions.map((question) => question.options.indexOf(question.answer));
 
     if (!correctAnswers) setCorrectAnswers(answers);
     setResults(selectedAnswers.map((answer, index) => answer === answers[index] ? "correct" : "incorrect"));

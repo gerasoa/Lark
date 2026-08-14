@@ -104,6 +104,13 @@ button,input { font:inherit; }
 .sentence-feedback { min-height:24px; margin:14px 0 0; font-size:14px; font-weight:700; }
 .sentence-feedback.is-correct { color:#26745b; }
 .sentence-feedback.is-incorrect { color:#a5452f; }
+.script-scenes { display:grid; gap:34px; margin-top:30px; }
+.script-scene { overflow:hidden; border:1px solid var(--line); border-radius:14px; background:var(--paper); }
+.script-scene h3 { margin:0; padding:13px 18px; background:var(--navy); color:white; font:700 12px var(--font-geist-mono); text-transform:uppercase; letter-spacing:.1em; }
+.script-line { display:grid; grid-template-columns:72px minmax(0,1fr); gap:18px; padding:15px 18px; border-top:1px solid var(--line); }
+.script-line:first-of-type { border-top:0; }
+.script-line strong { padding-top:2px; color:var(--coral); font:800 12px var(--font-geist-mono); text-transform:uppercase; letter-spacing:.05em; }
+.script-line p { margin:0; color:var(--ink); font-size:14px; line-height:1.65; }
 .vocab-card { display:block;padding:30px;margin-top:0;position:sticky;top:20px; }.vocab-heading { display:grid;grid-template-columns:40px 1fr; }.vocab-heading h2 { font-size:24px; }.vocab-item { padding:24px 0;border-top:1px solid var(--line); }.vocab-word { display:flex;gap:12px;align-items:center; }.vocab-word span { color:var(--coral);font:700 11px var(--font-geist-mono); }.vocab-word h3 { color:var(--navy);font-size:20px;margin:0; }.vocab-item p { color:var(--muted);font-size:13px;margin:9px 0; }.vocab-item em { color:var(--navy);font-family:Georgia,serif;font-size:14px; }
 .practice-card { margin-top:20px;padding:22px;display:flex;gap:15px;background:var(--navy);color:white;border-radius:15px; }.practice-card>span { color:var(--coral);font-size:26px; }.practice-card strong { font-size:13px; }.practice-card p { margin:6px 0 0;color:#c9d5df;font-size:12px;line-height:1.5; }
 .next-lesson { margin-bottom:30px;padding:35px 42px;background:var(--coral);color:white;border-radius:18px;display:flex;justify-content:space-between;align-items:center; }.next-lesson>span { font-size:12px;text-transform:uppercase;letter-spacing:.1em; }.next-lesson a { font-size:22px;font-weight:800; }.next-lesson b { margin-left:18px; }
@@ -214,6 +221,8 @@ button,input { font:inherit; }
   .quiz-check-button { width:100%; }
   .grammar-check-button { width:100%; }
   .sentence-check-button { width:100%; }
+  .script-line { grid-template-columns:1fr; gap:4px; padding:14px 16px; }
+  .script-line strong { padding-top:0; }
   .vocab-card { padding:24px 18px; }
   .next-lesson { padding:26px 20px; }
 }

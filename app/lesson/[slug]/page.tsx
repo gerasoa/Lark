@@ -45,6 +45,10 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
         {lesson.sentenceBuilding && <article className="lesson-block sentence-building-block"><div className="block-number">05</div><div className="block-content"><span className="kicker">Sentence Building</span><h2>Build the sentence</h2><p className="block-lead">Use the words below. You may change their form or add connecting words, but keep the original order.</p>
           <SentenceBuildingExercise exercises={lesson.sentenceBuilding} />
         </div></article>}
+
+        {lesson.scriptScenes && <article className="lesson-block script-block"><div className="block-number">06</div><div className="block-content"><span className="kicker">Transcript</span><h2>Script</h2><p className="block-lead">Read the dialogue from the episode and notice how each character speaks.</p>
+          <div className="script-scenes">{lesson.scriptScenes.map((scene,sceneIndex)=><section className="script-scene" aria-label={`Scene ${sceneIndex + 1}`} key={`scene-${sceneIndex + 1}`}><h3>Scene {String(sceneIndex + 1).padStart(2,"0")}</h3>{scene.map((line,lineIndex)=><div className="script-line" key={`${line.speaker}-${lineIndex}`}><strong>{line.speaker}</strong><p>{line.text}</p></div>)}</section>)}</div>
+        </div></article>}
       </div>
 
       <aside className="lesson-sidebar">
