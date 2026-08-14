@@ -11,8 +11,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.includes("localhost") ? "http" : "https");
   const socialImage = `${protocol}://${host}/og.png`;
-  const title = "Lark — Inglês em cenas, sons e contexto";
-  const description = "Aulas rápidas de inglês com vídeos, vocabulário e exercícios de compreensão.";
+  const title = "Lark — English through scenes, sound and context";
+  const description = "Short English lessons with videos, vocabulary and listening comprehension exercises.";
   return {
     title,
     description,
@@ -23,5 +23,5 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="pt-BR"><body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body></html>;
+  return <html lang="en-GB"><body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body></html>;
 }
