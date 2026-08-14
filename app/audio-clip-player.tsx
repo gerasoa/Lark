@@ -97,7 +97,7 @@ export default function AudioClipPlayer({ videoId, start, end, transcript }: Aud
         <span aria-hidden="true">{isPlaying ? "Ⅱ" : "▶"}</span>
       </button>
       <div className="audio-player-main">
-        <div className="audio-player-meta"><strong>{isPlaying ? "Playing clip" : "Listening clip"}</strong><span>{formatTime(elapsedRef.current)} / {formatTime(duration)}</span></div>
+        <div className="audio-player-meta"><strong>{isPlaying ? "Playing clip" : "Listening clip"}</strong><span>{formatTime((progress / 100) * duration)} / {formatTime(duration)}</span></div>
         <div className="audio-progress" role="progressbar" aria-label="Audio clip progress" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(progress)}>
           <span style={{ width: `${progress}%` }} />
         </div>

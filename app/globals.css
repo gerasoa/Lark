@@ -291,6 +291,10 @@ button,input { font:inherit; }
   .sentence-check-button { width:100%; }
   .script-line { grid-template-columns:1fr; gap:4px; padding:14px 16px; }
   .script-line strong { padding-top:0; }
+  .audio-player-shell { gap:12px; padding:16px; }
+  .audio-player-shell>button { flex-basis:48px; width:48px; height:48px; }
+  .audio-player-meta { align-items:flex-start; flex-direction:column; gap:4px; }
+  .audio-transcript { padding:17px; font-size:18px; }
   .vocab-card { padding:24px 18px; }
   .next-lesson { padding:26px 20px; }
   .feedback-hero { padding:28px 20px; }
