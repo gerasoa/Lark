@@ -5,6 +5,7 @@ export type Lesson = {
   questions: { prompt: string; options: string[]; answer: string }[];
   grammarExercises?: { parts: string[]; choices: { options: string[]; answer: string }[] }[];
   sentenceBuilding?: { words: string; answer: string; acceptedAnswers?: string[] }[];
+  audioClip?: { start: number; end: number; transcript: string };
   scriptScenes?: { speaker: string; text: string }[][];
 };
 
@@ -53,6 +54,11 @@ export const lessons: Lesson[] = [
         acceptedAnswers: ["Roy says he's going to sort this out."]
       }
     ],
+    audioClip: {
+      start: 76.7,
+      end: 79.6,
+      transcript: "Have you tried turning it off and on again?"
+    },
     scriptScenes: [
       [
         { speaker: "CEO", text: "So!" },

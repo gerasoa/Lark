@@ -4,6 +4,7 @@ import { getLesson, lessons } from "../../lessons";
 import ComprehensionExercise from "../../comprehension-exercise";
 import GrammarExercise from "../../grammar-exercise";
 import SentenceBuildingExercise from "../../sentence-building-exercise";
+import AudioClipPlayer from "../../audio-clip-player";
 
 export function generateStaticParams() { return lessons.map(({ slug }) => ({ slug })); }
 
@@ -48,6 +49,9 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
 
         {lesson.scriptScenes && <article className="lesson-block script-block"><div className="block-number">06</div><div className="block-content"><span className="kicker">Transcript</span><h2>Script</h2><p className="block-lead">Read the dialogue from the episode and notice how each character speaks.</p>
           <div className="script-scenes">{lesson.scriptScenes.map((scene,sceneIndex)=><section className="script-scene" aria-label={`Scene ${sceneIndex + 1}`} key={`scene-${sceneIndex + 1}`}><h3>Scene {String(sceneIndex + 1).padStart(2,"0")}</h3>{scene.map((line,lineIndex)=><div className="script-line" key={`${line.speaker}-${lineIndex}`}><strong>{line.speaker}</strong><p>{line.text}</p></div>)}</section>)}</div>
+        </div></article>}
+        {lesson.audioClip && <article className="lesson-block audio-clip-block"><div className="block-number">07</div><div className="block-content"><span className="kicker">Listening focus</span><h2>Listen to the short clip</h2><p className="block-lead">Play the audio and notice how the words connect in natural speech.</p>
+          <AudioClipPlayer videoId={lesson.videoId} start={lesson.audioClip.start} end={lesson.audioClip.end} transcript={lesson.audioClip.transcript} />
         </div></article>}
       </div>
 

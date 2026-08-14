@@ -147,6 +147,22 @@ button,input { font:inherit; }
 .script-line:first-of-type { border-top:0; }
 .script-line strong { padding-top:2px; color:var(--coral); font:800 12px var(--font-geist-mono); text-transform:uppercase; letter-spacing:.05em; }
 .script-line p { margin:0; color:var(--ink); font-size:14px; line-height:1.65; }
+.audio-clip { margin-top:28px; }
+.audio-youtube-source { position:absolute; width:1px; height:1px; margin:-1px; border:0; padding:0; opacity:.001; pointer-events:none; clip-path:inset(50%); }
+.audio-player-shell { display:flex; align-items:center; gap:18px; padding:22px; border-radius:15px; background:var(--navy); box-shadow:0 15px 35px rgba(16,42,67,.16); }
+.audio-player-shell>button { flex:0 0 54px; width:54px; height:54px; border:0; border-radius:50%; display:grid; place-items:center; background:var(--coral); color:white; cursor:pointer; transition:transform .2s,opacity .2s; }
+.audio-player-shell>button:hover:not(:disabled) { transform:scale(1.05); }
+.audio-player-shell>button:focus-visible { outline:3px solid var(--mint); outline-offset:3px; }
+.audio-player-shell>button:disabled { opacity:.55; cursor:wait; }
+.audio-player-shell>button span { transform:translateX(1px); font-size:17px; }
+.audio-player-main { flex:1; min-width:0; }
+.audio-player-meta { display:flex; justify-content:space-between; gap:18px; color:white; font-size:12px; }
+.audio-player-meta strong { font-size:13px; }
+.audio-player-meta span { color:#c9d5df; font-family:var(--font-geist-mono); }
+.audio-progress { height:7px; margin-top:14px; border-radius:999px; background:rgba(255,255,255,.16); overflow:hidden; }
+.audio-progress>span { display:block; height:100%; border-radius:inherit; background:var(--coral); transition:width .05s linear; }
+.audio-transcript { margin:16px 0 0; padding:20px 22px; border:1px solid var(--line); border-left:4px solid var(--coral); border-radius:11px; background:var(--ivory); color:var(--navy); font:20px/1.5 Georgia,serif; }
+.audio-transcript>span { display:block; margin-bottom:7px; color:var(--coral); font:800 10px var(--font-geist-sans); text-transform:uppercase; letter-spacing:.11em; }
 .vocab-card { display:block;padding:30px;margin-top:0;position:sticky;top:20px; }.vocab-heading { display:grid;grid-template-columns:40px 1fr; }.vocab-heading h2 { font-size:24px; }.vocab-item { padding:24px 0;border-top:1px solid var(--line); }.vocab-word { display:flex;gap:12px;align-items:center; }.vocab-word span { color:var(--coral);font:700 11px var(--font-geist-mono); }.vocab-word h3 { color:var(--navy);font-size:20px;margin:0; }.vocab-item p { color:var(--muted);font-size:13px;margin:9px 0; }.vocab-item em { color:var(--navy);font-family:Georgia,serif;font-size:14px; }
 .practice-card { margin-top:20px;padding:22px;display:flex;gap:15px;background:var(--navy);color:white;border-radius:15px; }.practice-card>span { color:var(--coral);font-size:26px; }.practice-card strong { font-size:13px; }.practice-card p { margin:6px 0 0;color:#c9d5df;font-size:12px;line-height:1.5; }
 .next-lesson { margin-bottom:30px;padding:35px 42px;background:var(--coral);color:white;border-radius:18px;display:flex;justify-content:space-between;align-items:center; }.next-lesson>span { font-size:12px;text-transform:uppercase;letter-spacing:.1em; }.next-lesson a { font-size:22px;font-weight:800; }.next-lesson b { margin-left:18px; }
