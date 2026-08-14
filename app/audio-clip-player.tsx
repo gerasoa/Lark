@@ -81,15 +81,12 @@ export default function AudioClipPlayer({ videoId, start, end, transcript }: Aud
     <iframe
       ref={iframeRef}
       className="audio-youtube-source"
-      src={`https://www.youtube-nocookie.com/embed/${videoId}?enablejsapi=1&controls=0&playsinline=1&rel=0`}
+      src={`https://www.youtube-nocookie.com/embed/${videoId}?enablejsapi=1&autoplay=0&controls=0&playsinline=1&rel=0`}
       title="Audio source for the listening clip"
       allow="autoplay; encrypted-media"
       aria-hidden="true"
       tabIndex={-1}
-      onLoad={() => {
-        setIsReady(true);
-        sendCommand("seekTo", [start, true]);
-      }}
+      onLoad={() => setIsReady(true)}
     />
 
     <div className="audio-player-shell">
