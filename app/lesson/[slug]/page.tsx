@@ -1,4 +1,4 @@
-import Link from "next/link";
+/* eslint-disable @next/next/no-html-link-for-pages */
 import { notFound } from "next/navigation";
 import { getLesson, lessons } from "../../lessons";
 import ComprehensionExercise from "../../comprehension-exercise";
@@ -19,12 +19,12 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
 
   return <main className="lesson-page">
     <header className="site-header lesson-header">
-      <Link className="brand" href="/"><span className="brand-mark">L</span>Lark</Link>
-      <Link className="back-link" href="/#lessons">← All lessons</Link>
+      <a className="brand" href="/"><span className="brand-mark">L</span>Lark</a>
+      <a className="back-link" href="/#lessons">← All lessons</a>
     </header>
 
     <section className="lesson-hero shell">
-      <div className="breadcrumbs"><Link href="/">Home</Link><span>/</span><span>Lessons</span><span>/</span><strong>{lesson.title}</strong></div>
+      <div className="breadcrumbs"><a href="/">Home</a><span>/</span><span>Lessons</span><span>/</span><strong>{lesson.title}</strong></div>
       <div className="lesson-title-row"><div><span className="eyebrow">● {lesson.category}</span><h1>{lesson.title}</h1><p>{lesson.description}</p></div><div className="lesson-stats"><span><small>Level</small>{lesson.level}</span><span><small>Length</small>{lesson.duration}</span></div></div>
     </section>
 
@@ -57,7 +57,7 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
       </aside>
     </section>
 
-    <section className="next-lesson shell"><span>Keep learning</span><Link href="/#lessons">Choose another lesson <b>→</b></Link></section>
-    <footer className="footer shell"><Link className="brand" href="/"><span className="brand-mark">L</span>Lark</Link><p>English through scenes, sound and context.</p><span>© 2026 Lark</span></footer>
+    <section className="next-lesson shell"><span>Keep learning</span><a href="/#lessons">Choose another lesson <b>→</b></a></section>
+    <footer className="footer shell"><a className="brand" href="/"><span className="brand-mark">L</span>Lark</a><p>English through scenes, sound and context.</p><span>© 2026 Lark</span></footer>
   </main>;
 }

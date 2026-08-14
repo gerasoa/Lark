@@ -1,15 +1,14 @@
-import Link from "next/link";
-
+/* eslint-disable @next/next/no-html-link-for-pages */
 export default function StudentAreaPage() {
   return <>
     <header className="site-header">
-      <Link className="brand" href="/"><span className="brand-mark">L</span>Lark</Link>
+      <a className="brand" href="/"><span className="brand-mark">L</span>Lark</a>
       <nav aria-label="Main navigation">
-        <Link href="/">Home</Link>
-        <Link href="/#lessons">Lessons</Link>
-        <Link className="student-area-nav-link" href="/student-area" aria-current="page">Student area</Link>
+        <a href="/">Home</a>
+        <a href="/#lessons">Lessons</a>
+        <a className="student-area-nav-link" href="/student-area" aria-current="page">Student area</a>
       </nav>
-      <Link className="button button-dark" href="/#lessons">View lessons</Link>
+      <a className="button button-dark" href="/#lessons">View lessons</a>
     </header>
     <main className="student-area-page" />
   </>;
